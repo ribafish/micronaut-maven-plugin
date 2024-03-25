@@ -1,10 +1,10 @@
 version: 2
 updates:
   - package-ecosystem: "maven"
-    directory: "/.mvn"
+    directory: "/"
     schedule:
       interval: "daily"
-      time: "16:20"
+      time: "16:25"
     allow:
       - dependency-name: "com.gradle:*"
         dependency-type: "production"
