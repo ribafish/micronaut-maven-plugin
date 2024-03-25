@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-      time: "16:32"
+      time: "02:00"
     allow:
       - dependency-name: "com.gradle:gradle-enterprise-maven-extension"
         dependency-type: "production"
