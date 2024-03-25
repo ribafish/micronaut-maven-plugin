@@ -4,7 +4,7 @@ updates:
     directory: "/.mvn"
     schedule:
       interval: "daily"
-      time: "02:00"
+      time: "16:10"
     allow:
       - dependency-name: "com.gradle.*"
         dependency-type: "production"
