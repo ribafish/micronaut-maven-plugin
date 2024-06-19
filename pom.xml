@@ -14,6 +14,7 @@
     <inceptionYear>2020</inceptionYear>
 
     <modules>
+        <module>parent</module>
         <module>micronaut-maven-core</module>
         <module>micronaut-maven-enforcer-rules</module>
         <module>micronaut-maven-jib-integration</module>
@@ -483,6 +484,9 @@
                                         <property>
                                             <name>shell</name>
                                         </property>
+                                        <property>
+                                            <name>indent</name>
+                                        </property>
                                     </nestedProperties>
                                     <executions>
                                         <execution>
@@ -585,42 +589,42 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.diffplug.spotless</groupId>
-                <artifactId>spotless-maven-plugin</artifactId>
-                <configuration>
-                    <formats>
-                        <format>
-                            <includes>
-                                <include>src/main/**/package-info.java</include>
-                                <include>src/main/**/module-info.java</include>
-                            </includes>
-                            <licenseHeader>
-                                <file>${spotless.licenseHeader.path}</file>
-                                <delimiter>/\*\*</delimiter>
-                            </licenseHeader>
-                        </format>
-                    </formats>
-                    <java>
-                        <excludes>
-                            <exclude>src/test/java/**/*.java</exclude>
-                        </excludes>
-                        <licenseHeader>
-                            <file>${maven.multiModuleProjectDirectory}/config/spotless.license.java</file>
-                        </licenseHeader>
-                    </java>
-                </configuration>
-                <executions>
-                    <execution>
-                        <!-- Runs in compile phase to fail fast in case of formatting issues.-->
-                        <id>spotless-check</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.diffplug.spotless</groupId>-->
+<!--                <artifactId>spotless-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <formats>-->
+<!--                        <format>-->
+<!--                            <includes>-->
+<!--                                <include>src/main/**/package-info.java</include>-->
+<!--                                <include>src/main/**/module-info.java</include>-->
+<!--                            </includes>-->
+<!--                            <licenseHeader>-->
+<!--                                <file>${spotless.licenseHeader.path}</file>-->
+<!--                                <delimiter>/\*\*</delimiter>-->
+<!--                            </licenseHeader>-->
+<!--                        </format>-->
+<!--                    </formats>-->
+<!--                    <java>-->
+<!--                        <excludes>-->
+<!--                            <exclude>src/test/java/**/*.java</exclude>-->
+<!--                        </excludes>-->
+<!--                        <licenseHeader>-->
+<!--                            <file>${maven.multiModuleProjectDirectory}/config/spotless.license.java</file>-->
+<!--                        </licenseHeader>-->
+<!--                    </java>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        &lt;!&ndash; Runs in compile phase to fail fast in case of formatting issues.&ndash;&gt;-->
+<!--                        <id>spotless-check</id>-->
+<!--                        <phase>compile</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>

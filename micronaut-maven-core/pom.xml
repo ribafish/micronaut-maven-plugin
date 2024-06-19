@@ -5,8 +5,9 @@
 
     <parent>
         <groupId>io.micronaut.maven</groupId>
-        <artifactId>micronaut-maven-plugin-parent</artifactId>
-        <version>4.4.1-SNAPSHOT</version>
+        <artifactId>micronaut-maven-spotless-parent</artifactId>
+        <version>999-SNAPSHOT</version>
+        <relativePath>../parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>micronaut-maven-core</artifactId>

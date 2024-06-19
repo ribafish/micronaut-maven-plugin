@@ -13,6 +13,7 @@
     <buildCache>
         <local>
             <enabled>true</enabled>
+            <directory>build-cache</directory>
         </local>
         <remote>
             <!-- Use the Develocity connector's access key based authentication.-->
